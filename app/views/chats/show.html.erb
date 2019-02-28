@@ -1,0 +1,16 @@
+<div class="chat">
+  <h1><%= @chat.title %>の掲示板</h1>
+  <%= link_to "戻る", chats_path, class: "btn btn-default" %>
+  <div class="coment_new">
+    <%= form_for(@coment) do |f| %>
+    <%= f.text_field :content, class: "form-control", placeholder: "コメント" %>
+    <%= f.hidden_field :chat_id %>
+    <%= f.submit "投稿", class: "btn btn-default" %>
+    <% end %>
+  </div>
+  <div class="coment_index">
+    <% @coments.each do |coment| %>
+    <h4><%= coment.id %>:<%= link_to coment.user.name, user_path(coment.user_id) %><%= coment.content %></h4><h6><%= coment.created_at %></h6>
+    <% end %>
+  </div>
+</div>

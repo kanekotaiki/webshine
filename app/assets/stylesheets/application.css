@@ -1,0 +1,167 @@
+@charset "UTF-8";
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ html {
+     font-size: 18px
+ }
+ @media (min-width: 769px) {
+     /*---------------------ここからtoppage*/
+    .SP {
+        display: none
+    }
+    .navbar {
+        display: none
+    }
+    .body_cover {
+        width: 80%;
+        margin: auto;
+        background-color: #eaf2f4;
+        border-top: 1px solid white;
+    }
+    .toppage_left {
+        width: 40%;
+        padding: 7% 0 7% 0;
+        margin: 5%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .toppage_left .maintitle {
+        text-align: center;
+        color: #f79f07;
+    }
+    .toppage_left .maintitle p {
+        font-size: 130px;
+        display: inline-block;
+        margin: 0;
+    }
+    .toppage_left .sabtitle {
+        margin: 0 auto 10% auto;
+        text-align: center;
+    }
+    .toppage_left .sabtitle p {
+        font-size: 20px;
+        color: #f79f07;
+        display: inline-block;
+        margin: 0;
+    }
+    .toppage_left a {
+        color: white;
+    }
+    .toppage_button {
+        margin: auto;
+        width: 55%
+    }
+    .toppage_left .word {
+         background-color: #f79f07;
+         display: inline-block;
+         padding: 2%;
+    }
+    .toppage_left .word p {
+        font-size: 20px;
+        display: inline-block;
+        margin: 0;
+    }
+    .toppage_left .shine {
+        background-color: #f79f07;
+        display: inline-block;
+        padding: 2%;
+        float: right;
+    }
+    .toppage_left .shine p {
+        font-size: 20px;
+        display: inline-block;
+        margin: 0;
+    }
+    .toppage_right {
+        width: 40%;
+        padding: 30% 0;
+        background-color: #f79f07;
+        margin: 1% 0 4% 5%;
+        display: inline-block;
+    }
+    .infrom {
+        text-align: right;
+        display: inline;
+    }
+    .infrom p {
+        margin: 1% 5% 0 0;
+    }
+    /*--------------------ここまでtoppage*/
+ }
+ @media (max-width: 768px) {
+     /*---------------------ここからtoppage*/
+     body {
+         background-color: #eaf2f4;
+     }
+    .pc {
+     display: none
+ }
+    .navbar {
+     background-color: #f79f07;
+     margin: 0;
+ }
+    .navbar-left {
+        padding: 5% 0 5% 10%;
+        display: inline-block;
+ }
+    .navbar-left h3 {
+        margin: 0;
+    }
+    .navbar-left a {
+     color: white;
+ }
+    .glyphicon {
+         color: white;
+         font-size: 30px;
+     }
+    .navbar-right {
+        text-align: center;
+        display: inline-block;
+        float: right;
+        margin: 6% 8% 5% 0;
+    }
+    .toppage_right {
+        background-color: #f79f07;
+        width: 100%;
+        padding: 30% 0;
+    }
+    .box {
+        overflow: hidden; 
+        width: 100%;
+        margin-right: 10%;
+        text-align: center;
+        list-style: none;
+        color: white;
+    }
+    .box a {
+        color: white;
+    }
+    .box li {
+        width: 100%;
+        border-bottom: solid thin white;
+    }
+    .body_cover {
+        width: 100%;
+        background-color: #eaf2f4;
+    }
+    .toppage_right {
+        width: 100%;
+        background-color: #f79f07;
+        padding: 50% 0;
+        margin: 20% 0;
+    }
+    /*--------------------ここまでtoppage*/
+ }

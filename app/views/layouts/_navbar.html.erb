@@ -1,0 +1,68 @@
+<div class="navbar">
+  <% if logged_in? %>
+    <ul class="nav navbar-nav navbar-left">
+      <li><h3><%= link_to "shine", root_path, class: "btn btn-default" %></h3></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <%= link_to settings_path, remote: true do %>
+        <span class="glyphicon glyphicon-cog"></span>
+        <div class="box">
+          <li><div class="rule"><h4>使い方</h4></div></li>
+          <li><h4><%= link_to "ユーザ詳細", edit_user_path(current_user) %></h4></li>
+          <li><h4><%= link_to "ログアウト", logout_path, method: :delete %></h4></li>
+          <li><h4><a href="https://docs.google.com/forms/d/e/1FAIpQLSfBomBCpxTeQ-pIOlRCxRpCyJuGS9VUoYV6h-GfwTaf8V_IPw/viewform?usp=pp_url">お問い合わせ</a></h4></li>
+        </div>
+        <!-- モーダル・ダイアログ -->
+        <div class="modal fade" id="sampleModal" tabindex="-1">
+        	<div class="modal-dialog">
+        		<div class="modal-content">
+        			<div class="modal-header">
+        				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+        				<h4 class="modal-title">使い方について</h4>
+        			</div>
+        			<div class="modal-body">
+        				<%= render 'layouts/setumei' %>
+        			</div>
+        			<div class="modal-footer">
+        				<button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+      <% end %>
+    </ul>
+       
+  <% else %>
+    <ul class="nav navbar-nav navbar-left">
+      <li><h3><%= link_to "shine", root_path %></h3></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <%= link_to settings_path, remote: true do %>
+            <span class="glyphicon glyphicon-th-list"></span>
+            
+      <!-- モーダル・ダイアログ -->
+        <div class="modal fade" id="sampleModal" tabindex="-1">
+        	<div class="modal-dialog">
+        		<div class="modal-content">
+        			<div class="modal-header">
+        				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+        				<h4 class="modal-title">使い方について</h4>
+        			</div>
+        			<div class="modal-body">
+        				<%= render 'layouts/setumei' %>
+        			</div>
+        			<div class="modal-footer">
+        				<button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+        		</div>
+        	</div>
+        </div>
+        <% end %>
+    </ul>
+    <div class="box">
+              <li><div class="rule"><h4>使い方</h4></div></li>
+              <li><h4><%= link_to "新規登録", signup_path %></h4></li>
+              <li><h4><%= link_to "ログイン", login_path %></h4></li>
+              <li><h4><a href="https://docs.google.com/forms/d/e/1FAIpQLSfBomBCpxTeQ-pIOlRCxRpCyJuGS9VUoYV6h-GfwTaf8V_IPw/viewform?usp=pp_url">お問い合わせ</a></h4></li>
+             </div>
+  <% end %>
+</div>

@@ -1,0 +1,22 @@
+<div class="chat">
+  <h1>掲示板</h1>
+    <div class="chat_new">
+      <%= form_for(@chat) do |f| %>
+      <%= f.text_field :title, class: "form-control", placeholder: "タイトルを入力" %>
+      <%= f.submit "作成", class: "btn btn-default" %>
+      <% end %>
+    </div>
+        <div class="coment_index">
+          <h1>タイトル一覧</h1>
+          <% @chats.each do |chat| %>
+            <h3><%= chat.id %> : <%= link_to chat.title, chat_path(chat) %>
+                
+                  <%= link_to chat, method: :delete do %>
+                  <span class="glyphicon glyphicon-trash"></span>
+                  <% end %>
+                
+            </h3>
+          <% end %>
+        </div>
+    
+</div>

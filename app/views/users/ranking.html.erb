@@ -1,0 +1,9 @@
+<div class="pv">
+    <h1>ランキング(アクセス数)</h1>
+    <%= link_to "戻る", :back, class: "btn btn-default" %>
+    <div class="pv_ranking">
+      <% @users.each_with_index do |user, index| %>
+        <h3><%= index+1 %>位 : <%= user.pv %>数：<%= link_to user.name, user_path(user) %></h3>
+      <% end %>
+    </div>
+</div>

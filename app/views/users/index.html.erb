@@ -1,0 +1,17 @@
+<div class="user_index">
+    <h1>othershine</h1>
+      <div class="text-center">
+        <%= link_to "戻る", root_path, class: "btn btn-default" %><%= paginate @users %>
+        </div>
+        <% @users.each do |user| %>
+          <h3><%= link_to user.name, user_path(user) %>
+            <% unless user.myshines.blank? %>
+              <div class="slider">
+                  <% user.myshines.limit(3).each do |myshine| %>
+                    <img src="<%= myshine.image %>">
+                  <% end %>
+              </div>
+          </h3>
+            <% end %>
+        <% end %>
+</div>

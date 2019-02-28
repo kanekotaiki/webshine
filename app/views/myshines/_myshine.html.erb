@@ -1,0 +1,13 @@
+<p><% myshines.each do |myshine| %>
+      <div class="toukou">
+        <% time_japan = Time.now.getlocal("+09:00") %>
+        <p><%= myshine.created_at %></p>
+        <% if current_user == @user %>
+          <%= link_to myshine, method: :delete do %>
+          <span class="glyphicon glyphicon-trash"></span>
+          <% end %>
+        <% end %>
+        <a class="popup" href="<%= myshine.image %>"><img src="<%= myshine.image %>"></a></p>
+      </div>  
+    <% end %>
+    

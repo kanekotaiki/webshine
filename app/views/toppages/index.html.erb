@@ -1,0 +1,73 @@
+<% if logged_in? %>
+<div class="toppage">
+  <div class="maintitle">
+    <p>shine</p>
+  </div>
+    <div class="sabtitle">
+      <p>〜輝く未来の為、いま頑張ろう〜</p>
+    </div>
+      <div class="main">
+        <div class="shine"><p><%= link_to"Myshine", user_path(current_user) %></p></div>
+        <div class="word"><p><%= link_to "掲示板", chats_path %></p></div>
+        <div class="ranking"><p><%= link_to"ランキング", ranking_path %></p></div>
+        <div class="othershine"><p><%= link_to "othershine", users_path %></p></div>
+      </div>
+</div>
+<% else %>
+  <div class="body_cover">
+     <div class="infrom pc">
+        <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfBomBCpxTeQ-pIOlRCxRpCyJuGS9VUoYV6h-GfwTaf8V_IPw/viewform?usp=pp_url">お問い合わせ</a></p>
+      </div>
+         
+    <div class="toppage_left pc">
+      <div class="maintitle"><p>shine</p></div>
+      <div class="sabtitle"><p>〜輝く未来の為、いま頑張ろう〜</p></div>
+      <div class="toppage_button">
+        <div class="word"><p><%= link_to "新規登録", signup_path %></p></div>
+        <div class="shine"><p><%= link_to "ログイン", login_path %></p></div>
+      </div>
+    </div>
+    <div class="toppage_right">
+     
+    </div>
+  <!--<div class="toppage">-->
+  <!--  <div class="before_login">-->
+    
+     
+      
+  <!--      <div class="main">-->
+          
+          <!--<div class="word"><p><%= link_to "新規登録", signup_path %></p></div>-->
+  <!--        <div class="ranking"><p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfBomBCpxTeQ-pIOlRCxRpCyJuGS9VUoYV6h-GfwTaf8V_IPw/viewform?usp=pp_url">お問い合わせ</a></p></div>-->
+  <!--        <div class="othershine"><div class="rule"><p>使い方</p></div>-->
+  <!--      </div>-->
+  </div>
+   <!--<div class="sannpuru animated">-->
+    
+   <!--    <div class="title animated">-->
+   <!--      <p>あなたの日々の変化を記録しよう</p>-->
+   <!--    </div>-->
+   <!--    <div class="gazou">-->
+   <!--      <%= image_tag "sanpuru0.png" %>-->
+   <!--      <%= image_tag "sanpuru1.png" %>-->
+   <!--      <%= image_tag "sanpuru2.png" %>-->
+   <!--      <%= image_tag "sanpuru3.png" %>-->
+   <!--      <%= image_tag "sanpuru4.png" %>-->
+   <!--   </div>-->
+      
+   <!-- </div>-->
+   <!-- <div class="setumei animated">-->
+   <!--     <p>あなたの秘密をこっそり<br>残そう！恥ずかしい日々の<br>自分の記録を自分専用のページ(Myshine)に残こそう!!</p>-->
+   <!--   </div>-->
+   <!-- <div class="setumei2 animated">-->
+   <!--   <p>掲示板機能があるので、<br>(自分で話し合うタイトルを作ることも可能)情報の交換や<br>アドバイスなどを聞くことが<br>可能に!!</p>-->
+   <!-- </div>-->
+   <!-- <div class="setumei3 animated">-->
+   <!--   <p>アカウントを公開設定<br>にしているユーザの<br>ページを(shine)見る<br>ことが可能に!!</p>-->
+   <!-- </div>-->
+   <!-- <div class="setumei4 animated">-->
+   <!--   <p>ユーザのアクセスランキング機能があるので、<br>より参考になる画像を見ることが可能に!!</p>-->
+   <!-- </div>-->
+   <!--</div>-->
+   <!--</div>-->
+<% end %>

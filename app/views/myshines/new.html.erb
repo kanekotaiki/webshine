@@ -1,0 +1,11 @@
+<div class="myshinenew">
+  <h1>Myshine</h1>
+    <div class="topic">
+      <%= form_for(@myshine) do |f| %>
+       <%= f.file_field :image, class: "shinepost" %>
+       <%= f.hidden_field :topic_id %>
+       <%= link_to "戻る", :back, class: "btn btn-default" %><%= f.submit "投稿", class: "btn btn-default" %>
+       <% end %>
+    </div>
+</div>
+

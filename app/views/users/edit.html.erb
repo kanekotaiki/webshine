@@ -1,0 +1,27 @@
+<div class="useredit">
+  <div class="col-md-6">
+  <h1>ユーザ編集</h1>
+    <%= link_to "アカウント削除", @user, method: :delete, data: { confirm: "本当に削除してもよろしいですか？" }, class: "btn btn-danger" %>
+    <%= form_for(@user) do |f| %>
+      <div class="form-group">
+        <%= f.label :neme, "ユーザ名" %>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :email, "メールアドレス" %>
+        <%= f.email_field :email, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :password, "パスワード" %>
+        <%= f.password_field :password, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :private, "非公開アカウント" %>
+        <%= f.check_box :private, class: "form-control1" %>
+      </div>
+      <div class="form-group">
+        <%= link_to "戻る", :back, class: "btn btn-default" %><%= f.submit "変更を保存する", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
