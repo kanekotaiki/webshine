@@ -1,3 +1,4 @@
+<div class="body_cover">
 <div class="usernew">
   <h1>新規登録</h1>
     <%= form_for(@user) do |f| %>
@@ -17,6 +18,7 @@
         <%= f.label :private, "非公開アカウント" %>
         <%= f.check_box :private, class: "form-control1" %>
       </div>
-    <%= f.submit "登録", class: "btn btn-primary" %>
+    <%= f.submit "登録", class: "btn btn-warning" %>
     <% end %>
+</div>
 </div>

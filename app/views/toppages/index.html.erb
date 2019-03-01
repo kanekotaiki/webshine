@@ -1,24 +1,25 @@
 <% if logged_in? %>
+<div class="body_cover">
 <div class="toppage">
-  <div class="maintitle">
-    <p>shine</p>
-  </div>
-    <div class="sabtitle">
-      <p>〜輝く未来の為、いま頑張ろう〜</p>
-    </div>
+  
       <div class="main">
-        <div class="shine"><p><%= link_to"Myshine", user_path(current_user) %></p></div>
-        <div class="word"><p><%= link_to "掲示板", chats_path %></p></div>
-        <div class="ranking"><p><%= link_to"ランキング", ranking_path %></p></div>
-        <div class="othershine"><p><%= link_to "othershine", users_path %></p></div>
-      </div>
+          <%= link_to user_path(current_user) do %>
+            <div class="shine"><%= image_tag ("myshine.png") %></div>
+          <% end %>
+          <%= link_to chats_path do %>
+            <div class="word"><%= image_tag ("keiziban.png") %></div>
+          <% end %>
+          <%= link_to ranking_path do %>
+            <div class="ranking"><%= image_tag ("rannking.png") %></div>
+          <% end %>
+          <%= link_to users_path do %>
+            <div class="othershine"><%= image_tag ("othersihne.png") %></div>
+          <% end %>
+        </div>
+</div>
 </div>
 <% else %>
   <div class="body_cover">
-     <div class="infrom pc">
-        <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfBomBCpxTeQ-pIOlRCxRpCyJuGS9VUoYV6h-GfwTaf8V_IPw/viewform?usp=pp_url">お問い合わせ</a></p>
-      </div>
-         
     <div class="toppage_left pc">
       <div class="maintitle"><p>shine</p></div>
       <div class="sabtitle"><p>〜輝く未来の為、いま頑張ろう〜</p></div>
@@ -30,17 +31,7 @@
     <div class="toppage_right">
      
     </div>
-  <!--<div class="toppage">-->
-  <!--  <div class="before_login">-->
-    
-     
-      
-  <!--      <div class="main">-->
-          
-          <!--<div class="word"><p><%= link_to "新規登録", signup_path %></p></div>-->
-  <!--        <div class="ranking"><p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfBomBCpxTeQ-pIOlRCxRpCyJuGS9VUoYV6h-GfwTaf8V_IPw/viewform?usp=pp_url">お問い合わせ</a></p></div>-->
-  <!--        <div class="othershine"><div class="rule"><p>使い方</p></div>-->
-  <!--      </div>-->
+  
   </div>
    <!--<div class="sannpuru animated">-->
     

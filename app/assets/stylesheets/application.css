@@ -18,16 +18,43 @@
      font-size: 18px
  }
  @media (min-width: 769px) {
-     /*---------------------ここからtoppage*/
-    .SP {
+    
+    .sp {
         display: none
     }
     .navbar {
-        display: none
+         background-color: #f79f07;
+         vertical-align: top;
+     }
+     .navbar h3 {
+         margin: 0;
+     }
+    .navbar-left {
+         margin: 1% 0 1% 10%;
+     }
+    .navbar a {
+         color: white;
+     }
+    .navbar_guide {
+         width: 38%;
+         margin: 1% 10% 0 0;
+         display: inline-block;
+         float: right;
+         color: white;
     }
+    .navbar_guide li  {
+        float: right;
+        list-style: none;
+        display: inline-block;
+        margin-left: 7%;
+    }
+    /*---------------------ここからtoppage*/
+    /* body.toppages_index .navbar {*/
+    /*    display: none*/
+    /*}*/
     .body_cover {
         width: 80%;
-        margin: auto;
+        margin: 3% auto 0 auto;
         background-color: #eaf2f4;
         border-top: 1px solid white;
     }
@@ -87,9 +114,9 @@
     }
     .toppage_right {
         width: 40%;
-        padding: 30% 0;
+        padding: 25% 0;
         background-color: #f79f07;
-        margin: 1% 0 4% 5%;
+        margin: 5% 0 4% 5%;
         display: inline-block;
     }
     .infrom {
@@ -100,6 +127,99 @@
         margin: 1% 5% 0 0;
     }
     /*--------------------ここまでtoppage*/
+     /*----------------------ここからtoppageのログインご*/
+     .toppage {
+         background-image: url("toppagelogin.jpeg");
+         background-size: cover;
+         padding: 33% 0 2% 0;
+         border-radius: 10px;
+     }
+     .main {
+         margin-left: 10%;
+         width: 30%;
+     }
+     .shine {
+         display: inline;
+     }
+     .shine img {
+         width: 40%;
+         margin-bottom: 2%;
+     }
+     .word {
+         display: inline;
+     }
+     .word img {
+         width: 40%;
+          margin-bottom: 2%;
+     }
+     .ranking {
+         display: inline;
+     }
+     .ranking img {
+         width: 40%;
+          margin-bottom: 2%;
+     }
+      .othershine {
+         display: inline;
+     }
+     .othershine img {
+         width: 40%;
+     }
+    /*----------------------ここからuser_new*/
+    
+    .usernew h1 {
+        margin-bottom: 15%
+    }
+    .usernew {
+        color: #f79f07;
+        margin: 0 auto;
+        padding: 5% 0 5% 0;
+        /*margin-top: 10%;*/
+        width: 60%;
+        text-align: center;
+    }
+    .usernew .form-group {
+        margin-bottom: 5%;
+    }
+    .usernew .btn {
+        margin-top: 10%;
+    }
+     /*----------------------ここまでuser_new*/
+     /*----------------------ここからsession_new*/
+    .sessionnew {
+        color: #f79f07;
+        margin: 0 auto;
+        padding: 10% 0 17% 0;
+        /*margin-top: 10%;*/
+        width: 60%;
+        text-align: center;
+    }
+    .sessionnew h1 {
+        margin-bottom: 15%
+    }
+    .sessionnew .form-group {
+        margin-bottom: 5%;
+    }
+    .sessionnew .btn {
+        margin-top: 10%;
+    }
+     /*----------------------ここまでsession_new*/
+     /*----------------------ここからuser_edit*/
+     .useredit {
+        color: #f79f07;
+        margin: 0 auto;
+        padding: 5% 0 5% 0;
+        /*margin-top: 10%;*/
+        width: 60%;
+        text-align: center;
+    }
+    .useredit .form-group {
+        margin-top: 5%;
+    }
+    .useredit .btn {
+        margin-top: 4%;
+    }
+     /*----------------------ここまでuser_edit*/
  }
  @media (max-width: 768px) {
      /*---------------------ここからtoppage*/
@@ -164,4 +284,99 @@
         margin: 20% 0;
     }
     /*--------------------ここまでtoppage*/
+    /*--------------------ここからoppageのログイン*/
+    .toppage {
+         background-image: url("toppagelogin.jpeg");
+         background-size: cover;
+         padding: 33% 0 19% 0;
+     }
+    .main {
+        margin: auto;
+        width: 95%;
+        font-size: 0;
+        margin-top: 100%;
+    }
+    .shine {
+         display: inline;
+     }
+     .shine img {
+         width: 25%;
+         
+     }
+     .word {
+         display: inline;
+     }
+     .word img {
+         width: 25%;
+     }
+     .ranking {
+         display: inline;
+     }
+     .ranking img {
+         width: 25%;
+         
+     }
+      .othershine {
+         display: inline;
+     }
+     .othershine img {
+         width: 25%;
+     }
+    /*--------------------ここからusernew*/
+    .usernew {
+        width: 100%;
+        color: #f79f07;
+        padding: 15% 0 20% 0;
+        /*margin-top: 10%;*/
+        text-align: center;
+    }
+    .usernew h1 {
+        margin-bottom: 10%
+    }
+    .usernew .form-group {
+        margin:0 auto 7% auto;
+        width: 80%;
+        
+    }
+    .usernew .btn {
+        margin-top: 10%;
+    }
+    /*--------------------ここまでusernew*/
+    /*--------------------ここからsessionnew*/
+    .sessionnew {
+        width: 100%;
+        color: #f79f07;
+        padding: 20% 0 20% 0;
+        /*margin-top: 10%;*/
+        text-align: center;
+    }
+    .sessionnew h1 {
+        margin-bottom: 30%
+    }
+    .sessionnew .form-group {
+        margin:0 auto 10% auto;
+        width: 80%;
+        
+    }
+    .sessionnew .btn {
+        margin-top: 15%;
+    }
+    /*--------------------ここまでsessionnew*/
+    /*--------------------ここからuser_edit*/
+    .useredit {
+        width: 100%;
+        color: #f79f07;
+        padding: 10% 0 20% 0;
+        /*margin-top: 10%;*/
+        text-align: center;
+    }
+    .useredit .form-group {
+        margin: 7% auto 0 auto;
+        width: 80%;
+        
+    }
+    .useredit .btn {
+        margin-top: 5%;
+    }
+     /*--------------------ここからuser_edit*/
  }

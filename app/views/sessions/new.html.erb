@@ -1,3 +1,4 @@
+<div class="body_cover">
 <div class="sessionnew">
   <h1>ログイン</h1>
     <%= form_for(:session, url: log_path) do |f| %>
@@ -7,6 +8,7 @@
     <div class="form-group">
       <%= f.password_field :password, class: "form-control", placeholder: "パスワード" %>
     </div>
-    <%= f.submit "ログイン", class: "btn btn-primary" %>
+    <%= f.submit "ログイン", class: "btn btn-warning" %>
     <% end %>
+</div>
 </div>
