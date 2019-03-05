@@ -1,20 +1,31 @@
-<div class="myshineindex">
-  <h1><%= @user.name %>shines</h1>
-  <h1><%= @topic.title %></h1>
-    <%= link_to "一覧へ", user_path(@user), class: "btn btn-default" %>
-    
-      <% if current_user == @user %>
-        <%= link_to "画像を投稿", new_myshine_path(topic_id: @topic.id), class: "btn btn-default" %> <%= paginate @myshines %>
-      <% else %>
-   
-        <h3><%= link_to "戻る", users_path, class: "btn btn-default" %></h3>
-      <% end %>
-        <div class="post">
-          <%= render "myshines/myshine", myshines: @myshines %>
-        </div>
-          <div class="posttitle">
-            <% @topics.each do |topic| %>
-             <h2><%= link_to topic.title, topic_path(topic, user_id: @user.id) %></h2>
-            <% end %>
+<div class="body_cover">
+  <div class="myshineindex">
+    <!--<h1><%= @user.name %>shines</h1>-->
+    <h1><%= @topic.title %></h1>
+    <%= link_to "一覧へ", user_path(@user), class: "btn btn-warning" %>
+      
+        <% if current_user == @user %>
+          <%= link_to "画像を投稿", new_myshine_path(topic_id: @topic.id), class: "btn btn-warning" %> <%= paginate @myshines %>
+        <% else %>
+     
+          <h3><%= link_to "戻る", users_path, class: "btn btn-default" %></h3>
+        <% end %>
+          <div class="post">
+            <%= render "myshines/myshine", myshines: @myshines %>
           </div>
+            <!--<div class="user_show_topic">-->
+            <!--<h2>タイトル一覧</h2>-->
+            <!--<% @topics.each do |topic| %>-->
+            <!--  <div class="title_box">-->
+            <!--    <h2><%= link_to topic.title, topic_path(topic, user_id: @user.id) %>-->
+            <!--      <% if current_user == @user %>-->
+            <!--        <%= link_to topic, method: :delete do %>-->
+            <!--          <span class="glyphicon glyphicon-trash"></span>-->
+            <!--        <% end %>-->
+            <!--      <% end %>-->
+            <!--    </h2>-->
+            <!--  </div>-->
+            <!--  <% end %>-->
+            <!--</div>-->
+  </div>
 </div>

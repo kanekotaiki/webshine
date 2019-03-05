@@ -1,16 +1,17 @@
 <div class="chat">
-  <h1><%= @chat.title %>の掲示板</h1>
-  <%= link_to "戻る", chats_path, class: "btn btn-default" %>
+  <h1 class="pc"><%= @chat.title %>の掲示板</h1>
+  <h3 class="sp"><%= @chat.title %>の<br>掲示板</h3>
+  <%= link_to "戻る", chats_path, class: "btn btn-warning" %>
   <div class="coment_new">
     <%= form_for(@coment) do |f| %>
     <%= f.text_field :content, class: "form-control", placeholder: "コメント" %>
     <%= f.hidden_field :chat_id %>
-    <%= f.submit "投稿", class: "btn btn-default" %>
+    <%= f.submit "投稿", class: "btn btn-warning" %>
     <% end %>
   </div>
   <div class="coment_index">
     <% @coments.each do |coment| %>
-    <h4><%= coment.id %>:<%= link_to coment.user.name, user_path(coment.user_id) %><%= coment.content %></h4><h6><%= coment.created_at %></h6>
+    <h4><%= coment.id %>:<%= link_to coment.user.name, user_path(coment.user_id) %><%= coment.content %></h4><h6><%= coment.created_at.strftime("%Y年 %m月 %d日") %></h6>
     <% end %>
   </div>
 </div>

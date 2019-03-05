@@ -63,7 +63,7 @@
     }
     .toppage_left {
         width: 40%;
-        padding: 7% 0 7% 0;
+        padding: 7% 0 15% 0;
         margin: 5%;
         display: inline-block;
         vertical-align: top;
@@ -117,10 +117,13 @@
     }
     .toppage_right {
         width: 40%;
-        padding: 25% 0;
+        padding: 1%;
         background-color: #f79f07;
         margin: 5% 0 4% 5%;
         display: inline-block;
+    }
+    .toppage_right img {
+        width: 100%;
     }
     .infrom {
         text-align: right;
@@ -132,7 +135,7 @@
     /*--------------------ここまでtoppage*/
      /*----------------------ここからtoppageのログインご*/
      .toppage {
-         background-image: url("toppagelogin.jpeg");
+         background-image: url("toppagelogin.png");
          background-size: cover;
          padding: 33% 0 2% 0;
          border-radius: 10px;
@@ -168,6 +171,28 @@
      .othershine img {
          width: 40%;
      }
+     
+     /*----------------------ここからuser_index*/
+    
+    .user_index {
+       text-align: center;
+       color: #f79f07;
+       padding: 5% 0;
+    }
+    .user_index .btn {
+        margin: 5% auto;
+    }
+    .users_cover {
+        width: 100%;
+    }
+    .users_index_other {
+        vertical-align: top;
+        width: 20%; 
+        height: 200px;
+        display: inline-block;
+        border: solid thin #f79f07;
+    }
+     /*----------------------ここまでuser_index*/
     /*----------------------ここからuser_new*/
     
     .usernew h1 {
@@ -198,7 +223,7 @@
         text-align: center;
     }
     .sessionnew h1 {
-        margin-bottom: 15%
+        margin-bottom: 15%;
     }
     .sessionnew .form-group {
         margin-bottom: 5%;
@@ -207,6 +232,51 @@
         margin-top: 10%;
     }
      /*----------------------ここまでsession_new*/
+     /*----------------------ここからuser_show*/
+     
+     .myshineindex {
+         text-align: center;
+         color: #f79f07;
+         padding: 5% 0 10% 0;
+     }
+     .myshineindex h1 {
+         margin: 0;
+     }
+     .myshineindex form {
+         width: 30%;
+         margin: auto;
+         margin-bottom: 10%;
+         margin-top: 10%;
+     }
+     .myshineindex .btn {
+         margin-top: 2%;
+         margin-bottom: 5%;
+     }
+     .myshineindex .title_box {
+         background-color: white;
+         display: inline-block;
+         padding: 4% 0;
+         width:20%;
+         height: 10%;
+         margin-bottom: 1%;
+     }
+     .myshineindex .title_box a {
+         color: #f79f07;
+         font-size: 12px; 
+     }
+     .myshineindex .title_box .glyphicon {
+         color: red;
+     }
+     .user_show_topic {
+         width: 60%;
+         margin: auto;
+     }
+     .user_show_topic h2 {
+         margin-bottom: 5%;
+     }
+     
+     /*----------------------ここまでuser_show*/
+     
      /*----------------------ここからuser_edit*/
      .useredit {
         color: #f79f07;
@@ -216,13 +286,91 @@
         width: 60%;
         text-align: center;
     }
-    .useredit .form-group {
+     .useredit .form-group {
         margin-top: 5%;
     }
-    .useredit .btn {
+     .useredit .btn {
         margin-top: 4%;
     }
      /*----------------------ここまでuser_edit*/
+     
+     /*----------------------ここからuser_ranking*/
+     
+     .pv {
+         text-align: center;
+         color: #f79f07;
+         padding: 5% 0;
+     }
+     .pv h1 {
+         margin: 0 0 3% 0;
+     }
+     .pv .btn {
+         margin-bottom: 10%;
+     }
+     .pv_ranking h3 {
+         border: solid thin white;
+         width: 50%;
+         margin: 0.5% auto;
+         
+     }
+     /*----------------------ここまでuser_ranking*/
+     
+     /*----------------------ここからmyshine_new*/
+     .myshinenew {
+         padding: 10% 0;
+         text-align: center;
+         color: #f79f07;
+     }
+     .myshinenew h1 {
+         margin-bottom: 15%;
+     }
+     .myshinenew .topic {
+         display: inline-block;
+     }
+     .myshinenew .btn {
+         margin: 50% 3% 0 3%;
+     }
+     /*----------------------ここまでmyshine_new*/
+     /*----------------------ここからmyshine_myshine*/
+     .toukou {
+         width: 20%;
+         margin: 0.5% 0.1% 0.5% 0.1%;
+         display: inline-block;
+          border: solid thin white;
+     }
+     .toukou p {
+         display: inline-block;
+     }
+     .toukou img {
+         width: 100%;
+         height: 200px;
+         object-fit: contain;
+     }
+     /*----------------------ここまでmyshine_myshine*/
+     /*----------------------ここからchats_index*/
+     
+     .chat {
+         text-align: center;
+         padding: 5% 0;
+         color: #f79f07;
+     }
+     .chat h1 {
+         margin-bottom: 0;
+     }
+     .chat form {
+         width: 50%;
+         margin: auto;
+     }
+     .chat .btn {
+         margin: 2% 0 5% 0 ;
+     }
+     .chat .coment_index {
+         width: 50%;
+         margin: auto;
+         text-align: left;
+     }
+     /*----------------------ここまでchats_index*/
+     
  }
  @media (max-width: 768px) {
      /*---------------------ここからtoppage*/
@@ -268,6 +416,7 @@
         text-align: center;
         list-style: none;
         color: white;
+        display: none;
     }
     .box a {
         color: white;
@@ -289,7 +438,7 @@
     /*--------------------ここまでtoppage*/
     /*--------------------ここからoppageのログイン*/
     .toppage {
-         background-image: url("toppagelogin.jpeg");
+         background-image: url("toppagelogin.png");
          background-size: cover;
          padding: 33% 0 19% 0;
      }
@@ -325,6 +474,44 @@
      .othershine img {
          width: 25%;
      }
+     
+        /*----------------------ここからuser_index*/
+    
+    .user_index {
+       text-align: center;
+       color: #f79f07;
+       padding: 5% 0;
+    }
+    .user_index .btn {
+        margin: 5% auto;
+    }
+    .users_cover {
+        width: 100%;
+    }
+    .users_index_other {
+        vertical-align: top;
+        width: 32%; 
+        height: 150px;
+        display: inline-block;
+        border: solid thin #f79f07;
+    }
+    .users_index_other .bx-wrapper {
+        margin: 0;
+        height: 100px;
+    }
+    .users_index_other .bx-wrapper img {
+        height: 90px;
+    }
+    .bx-prev {
+        display: none;
+    }
+    .bx-next {
+        display: none;
+    }
+    .bx-pager {
+        padding: 0;
+    }
+     /*----------------------ここまでuser_index*/
     /*--------------------ここからusernew*/
     .usernew {
         width: 100%;
@@ -365,6 +552,51 @@
         margin-top: 15%;
     }
     /*--------------------ここまでsessionnew*/
+    /*----------------------ここからuser_show*/
+    .myshineindex {
+         text-align: center;
+         color: #f79f07;
+         padding: 5% 0 10% 0;
+     }
+     .myshineindex h1 {
+         margin: 5% 0 5% 0;
+     }
+     .myshineindex form {
+         width: 80%;
+         margin: auto;
+         margin-bottom: 10%;
+         margin-top: 20%;
+     }
+     .myshineindex .btn {
+         margin-top: 10%;
+     }
+     .myshineindex .title_box {
+         background-color: white;
+         display: inline-block;
+         padding: 4% 0;
+         width:30%;
+         height: 10%;
+         margin-bottom: 1%;
+     }
+     .myshineindex .title_box a {
+         color: #f79f07;
+         font-size: 12px; 
+     }
+     .myshineindex .title_box .glyphicon {
+         color: red;
+         font-size: 12px;
+         margin-left: 3%;
+     }
+     .user_show_topic {
+         width: 100%;
+         margin: auto;
+         margin-top: 15%;
+     }
+     .user_show_topic h2 {
+         margin-bottom: 5%;
+     }
+    
+    /*----------------------ここまでuser_show*/
     /*--------------------ここからuser_edit*/
     .useredit {
         width: 100%;
@@ -382,4 +614,102 @@
         margin-top: 5%;
     }
      /*--------------------ここからuser_edit*/
+     /*----------------------ここからuser_ranking*/
+     
+     .pv {
+         text-align: center;
+         color: #f79f07;
+         padding: 15% 0;
+     }
+     .pv h1 {
+         margin: 0 0 5% 0;
+     }
+     .pv .btn {
+         margin-bottom: 10%;
+     }
+     .pv_ranking h3 {
+         border: solid thin white;
+         width: 90%;
+         margin: 1% auto;
+         
+     }
+     /*----------------------ここまでuser_ranking*/
+     /*--------------------ここからmyshine_new*/
+     
+     .myshinenew {
+         padding: 30% 0;
+         text-align: center;
+         color: #f79f07;
+     }
+     .myshinenew h1 {
+         margin-bottom: 15%;
+     }
+     .myshinenew .topic {
+         display: inline-block;
+     }
+     .myshinenew .btn {
+         margin: 50% 3% 0 3%;
+     }
+     /*--------------------ここからmyshine_new*/
+     
+     /*----------------------ここからmyshine_myshine*/
+     .post {
+         margin-top: 5%;
+     }
+     .toukou {
+         width: 32%;
+         margin: 0.5% 0 0.5% 0;
+         display: inline-block;
+         border: solid thin white;
+     }
+     .toukou p {
+         display: inline-block;
+         font-size: 10px;
+     }
+     .toukou .glyphicon {
+         display: inline-block;
+         font-size: 12px;
+         color: red;
+     }
+     .toukou img {
+         width: 100%;
+         height: 100px;
+         object-fit: contain;
+     }
+     /*----------------------ここまでmyshine_myshine*/
+     
+     /*----------------------ここからchats_index*/
+     
+     .chat {
+         text-align: center;
+         padding: 5% 0;
+         color: #f79f07;
+     }
+     .chat h3 {
+         margin-bottom: 5%;
+     }
+     .chat form {
+         width: 90%;
+         margin: auto;
+     }
+     .chat .btn {
+         margin: 5% 0 15% 0 ;
+     }
+     .chat .coment_index {
+         width: 90%;
+         margin: auto;
+         text-align: left;
+     }
+     .chat .coment_index h4 {
+         text-align: left;
+     }
+     .coment_index .glyphicon {
+         color: red;
+         font-size: 12px;
+     }
+     .coment_index h4 {
+         margin: auto;
+         text-align: center;
+     }
+     /*----------------------ここまでchats_index*/
  }
