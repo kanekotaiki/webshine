@@ -15,7 +15,11 @@
  *= require_self
  */
  html {
-     font-size: 18px
+     font-size: 18px;
+     
+ }
+ body {
+     background-color: #eaf2f4;
  }
  @media (min-width: 769px) {
     
@@ -58,13 +62,14 @@
     .body_cover {
         width: 80%;
         margin: 3% auto 0 auto;
-        background-color: #eaf2f4;
+        /*background-color: #eaf2f4;*/
+         background-color: #299dff;
         border-top: 1px solid white;
     }
     .toppage_left {
         width: 40%;
         padding: 7% 0 15% 0;
-        margin: 5%;
+        margin: 5% 2% 5% 5%;
         display: inline-block;
         vertical-align: top;
     }
@@ -115,15 +120,22 @@
         display: inline-block;
         margin: 0;
     }
+    .toppage_right.owl-carousel.owl-theme.sp{
+        display: none;
+    }
     .toppage_right {
-        width: 40%;
-        padding: 1%;
+        width: 50%;
+        padding: 0.5%;
         background-color: #f79f07;
-        margin: 5% 0 4% 5%;
+        margin: 6% 0 4% 0;
         display: inline-block;
     }
     .toppage_right img {
         width: 100%;
+        height: 500px;
+    }
+    .owl-carousel.owl-loaded {
+        display: inline-block;
     }
     .infrom {
         text-align: right;
@@ -182,6 +194,12 @@
     .user_index .btn {
         margin: 5% auto;
     }
+    .bx-prev {
+        display: none;
+    }
+    .bx-next {
+        display: none;
+    }
     .users_cover {
         width: 100%;
     }
@@ -191,6 +209,10 @@
         height: 200px;
         display: inline-block;
         border: solid thin #f79f07;
+    }
+    .users_index_other img {
+        height: 140px;
+        object-fit: contain;
     }
      /*----------------------ここまでuser_index*/
     /*----------------------ここからuser_new*/
@@ -299,7 +321,7 @@
      .pv {
          text-align: center;
          color: #f79f07;
-         padding: 5% 0;
+         padding: 5% 0 10% 0;
      }
      .pv h1 {
          margin: 0 0 3% 0;
@@ -307,11 +329,19 @@
      .pv .btn {
          margin-bottom: 10%;
      }
+     .pv_ranking {
+         width: 90%;
+         margin: auto;
+     }
      .pv_ranking h3 {
-         border: solid thin white;
-         width: 50%;
-         margin: 0.5% auto;
-         
+         text-align: left;
+         border: solid #f79f07;
+         background-color: white;
+         width: 17%;
+         margin: 1% auto;
+         padding: 2%;
+         display: inline-block;
+         /*height: 100px;         */
      }
      /*----------------------ここまでuser_ranking*/
      
@@ -369,6 +399,20 @@
          margin: auto;
          text-align: left;
      }
+     .chat .coment_index h4 {
+         margin: 0;
+         color: black;
+     }
+     .chat .coment_index h6 {
+         margin: 0 0 3% 0;
+         display: inline-block;
+     }
+     .chat .glyphicon {
+         color: red;
+         font-size: 12px;
+         display: inline-block;
+         margin: 0;
+     }
      /*----------------------ここまでchats_index*/
      
  }
@@ -404,11 +448,6 @@
         float: right;
         margin: 6% 8% 5% 0;
     }
-    .toppage_right {
-        background-color: #f79f07;
-        width: 100%;
-        padding: 30% 0;
-    }
     .box {
         overflow: hidden; 
         width: 100%;
@@ -431,9 +470,15 @@
     }
     .toppage_right {
         width: 100%;
-        background-color: #f79f07;
-        padding: 50% 0;
-        margin: 20% 0;
+        background-color: white;
+        padding: 0;
+        margin: 0;
+    }
+    .owl-carousel.owl-loaded{
+        display: none;
+    }
+    .toppage_right.owl-carousel.owl-theme.sp{
+        display: inline-block;
     }
     /*--------------------ここまでtoppage*/
     /*--------------------ここからoppageのログイン*/
@@ -627,6 +672,9 @@
      .pv .btn {
          margin-bottom: 10%;
      }
+     .pv_ranking {
+         text-align: left;
+     }
      .pv_ranking h3 {
          border: solid thin white;
          width: 90%;
@@ -710,6 +758,21 @@
      .coment_index h4 {
          margin: auto;
          text-align: center;
+     }
+     .chat .coment_index h4 {
+         margin: 0;
+         color: black;
+     }
+     .chat .coment_index h6 {
+         margin: 0 0 5% 0;
+         display: inline-block;
+         
+     }
+     .chat .glyphicon {
+         color: red;
+         font-size: 12px;
+         display: inline-block;
+         margin: 0;
      }
      /*----------------------ここまでchats_index*/
  }
