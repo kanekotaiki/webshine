@@ -414,12 +414,26 @@
          margin: 0;
      }
      /*----------------------ここまでchats_index*/
-     
- }
+     ul {
+         list-style: none;
+     }
+     .modal-body ul h3 {
+         background-color: #f79f07;
+         text-align: center;
+         margin-bottom: 2%;
+     }
+     }
  @media (max-width: 768px) {
      /*---------------------ここからtoppage*/
      body {
          background-color: #eaf2f4;
+     }
+     ul {
+         list-style: none;
+         padding: 0;
+     }
+     .modal-body ul h3 {
+         background-color: #f79f07;
      }
     .pc {
      display: none
