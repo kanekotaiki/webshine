@@ -1,32 +1,29 @@
 <div class="body_cover">
   <div class="myshineindex">
     <h1><%= @user.name %>shine</h1>
-      <% unless current_user == @user %><%= link_to "othershineへ", users_path, class: "btn btn-default" %><% end %>
-        <div class="user_show_topic_post">
-          
-          <% if current_user == @user %>
-            <%= form_for(@topic) do |f| %>
-            <%= render 'layouts/error_messages', model: f.object %>
-            <%= f.text_field :title, class: "form-control", placeholder: "タイトル入力"%>
-            <%= f.submit "投稿", class: "btn btn-warning" %>
-            <% end %>
-          <% end %>
-          </div>
-          <div class="user_show_topic">
-            <!--<h2>タイトル一覧</h2>-->
-            <% @topics.each do |topic| %>
-              <div class="title_box">
-                <h2><%= link_to topic.title, topic_path(topic, user_id: @user.id) %>
-                  <% if current_user == @user %>
-                    <%= link_to topic, method: :delete do %>
-                      <span class="glyphicon glyphicon-trash"></span>
-                    <% end %>
-                  <% end %>
-                </h2>
-              </div>
+    <% unless current_user == @user %><%= link_to "othershineへ", users_path, class: "btn btn-default" %><% end %>
+    <div class="user_show_topic_post">
+      <% if current_user == @user %>
+        <%= form_for(@topic) do |f| %>
+          <%= render 'layouts/error_messages', model: f.object %>
+          <%= f.text_field :title, class: "form-control", placeholder: "タイトル入力"%>
+          <%= f.submit "投稿", class: "btn btn-warning" %>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="user_show_topic">
+      <% @topics.each do |topic| %>
+        <div class="title_box">
+          <h2><%= link_to topic.title, topic_path(topic, user_id: @user.id) %>
+            <% if current_user == @user %>
+              <%= link_to topic, method: :delete do %>
+                <span class="glyphicon glyphicon-trash"></span>
               <% end %>
-            </div>
-          
+            <% end %>
+          </h2>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
   

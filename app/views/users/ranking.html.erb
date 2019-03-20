@@ -1,8 +1,8 @@
 <div class="body_cover">
   <div class="pv">
-      <h1 class="pc">ランキング(アクセス数)</h1>
-      <h1 class="sp">ランキング<br>(アクセス数)</h1>
-      <%= link_to "戻る", :back, class: "btn btn-warning" %>
+    <h1 class="pc">ランキング(アクセス数)</h1>
+    <h1 class="sp">ランキング<br>(アクセス数)</h1>
+    <%= link_to "戻る", :back, class: "btn btn-warning" %>
       <div class="pv_ranking">
         <% @users.each_with_index do |user, index| %>
           <h3><%= index+1 %>位 : <%= user.pv %>数：<%= link_to user.name, user_path(user) %></h3>

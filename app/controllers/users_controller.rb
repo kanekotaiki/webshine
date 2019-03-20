@@ -10,11 +10,11 @@ class UsersController < ApplicationController
   end
   def show
     unless current_user == @user
-    unless @user.pv.present?
-      @user.pv = 0
-    end
-     @user.pv = @user.pv + 1
-     @user.save
+      unless @user.pv.present?
+        @user.pv = 0
+      end
+      @user.pv = @user.pv + 1
+      @user.save
     end
     @topics = @user.topics.uniq
     @topic = Topic.new
@@ -22,7 +22,6 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
-
   def create
     @user = User.new(user_params)
     if @user.save
@@ -33,17 +32,9 @@ class UsersController < ApplicationController
       render :new
     end
   end
-
   def edit
-    
-  end
-  def destroy
-  @user.destroy
-  flash[:success] = "アカウントを削除しました"
-  redirect_to root_url
   end
   def update
-    
     if @user.update(user_params)
       flash[:success] = "ユーザの情報を変更しました"
       redirect_to root_url
@@ -52,13 +43,11 @@ class UsersController < ApplicationController
       render :edit
     end
   end
-  
   def destroy
     @user.destroy
     flash[:success] = "ユーザを削除しました"
     redirect_to root_url
   end
-  
   private 
   def set_user
     @user = User.find(params[:id])
@@ -66,7 +55,7 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation, :private)
   end
-   def correct_user
+  def correct_user
     @user = current_user
     unless @user
       redirect_to root_url

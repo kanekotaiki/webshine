@@ -2,9 +2,7 @@ class ChatsController < ApplicationController
   def index
     @chat = Chat.new
     @chats = Chat.all.uniq
-    
   end
-
   def show
     @chat = Chat.find(params[:id])
     @coment = current_user.coments.new(chat_id: @chat.id)

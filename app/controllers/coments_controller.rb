@@ -11,7 +11,6 @@ class ComentsController < ApplicationController
       render "chats/show"
     end
   end
-
   def destroy
     @coment = Coment.find(params[:id])
     @coment.destroy

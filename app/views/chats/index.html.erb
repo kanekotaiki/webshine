@@ -2,25 +2,22 @@
   <div class="chat">
     <h1 class="pc">掲示板</h1>
     <h3 class="sp">掲示板</h3>
-      <div class="chat_new">
-        <%= form_for(@chat) do |f| %>
-        <%= f.text_field :title, class: "form-control", placeholder: "タイトルを入力" %>
-        <%= f.submit "作成", class: "btn btn-warning" %>
-        <% end %>
-      </div>
-          <div class="coment_index">
-            <h1 class="pc">タイトル一覧</h1>
-            <h4 class="sp">タイトル一覧</h4>
-            <% @chats.each do |chat| %>
-              <h3><%= chat.id %> : <%= link_to chat.title, chat_path(chat) %>
-                  
-                    <%= link_to chat, method: :delete do %>
-                    <span class="glyphicon glyphicon-trash"></span>
-                    <% end %>
-                  
-              </h3>
+    <div class="chat_new">
+      <%= form_for(@chat) do |f| %>
+      <%= f.text_field :title, class: "form-control", placeholder: "タイトルを入力" %>
+      <%= f.submit "作成", class: "btn btn-warning" %>
+      <% end %>
+    </div>
+    <div class="coment_index">
+      <h1 class="pc">タイトル一覧</h1>
+      <h4 class="sp">タイトル一覧</h4>
+      <% @chats.each do |chat| %>
+        <h3><%= chat.id %> : <%= link_to chat.title, chat_path(chat) %>
+            <%= link_to chat, method: :delete do %>
+            <span class="glyphicon glyphicon-trash"></span>
             <% end %>
-          </div>
-      
+        </h3>
+      <% end %>
+    </div>
   </div>
 </div>
