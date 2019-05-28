@@ -1,7 +1,7 @@
 <div class="body_cover">
   <div class="myshineindex">
-    <%= @user.name %>
-    <%= @topic.title %>
+    <div class="myshineindex_name"><%= @user.name %></div>
+    <div class="myshineindex_title"><%= @topic.title %></div>
     <%= link_to "一覧へ", user_path(@user), class: "btn btn-warning" %>
     <% if current_user == @user %>
       <%= link_to "画像を投稿", new_myshine_path(topic_id: @topic.id), class: "btn btn-warning" %> <%= paginate @myshines %>
