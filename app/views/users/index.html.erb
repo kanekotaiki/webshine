@@ -8,7 +8,7 @@
           <%= link_to user.name, user_path(user) %>
           <% unless user.myshines.blank? %>
             <div class="slider">
-              <% user.myshines.limit(3).each do |myshine| %>
+              <% user.myshines.limit(1).each do |myshine| %>
                 <img src="<%= myshine.image %>">
               <% end %>
             </div>
